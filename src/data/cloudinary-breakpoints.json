@@ -1,0 +1,10 @@
+{
+  "images/posts/01": {
+    "width": 970,
+    "height": 500,
+    "widths": [
+      200,
+      970
+    ]
+  }
+}

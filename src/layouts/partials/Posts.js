@@ -1,3 +1,4 @@
+import PostImage from "@components/PostImage";
 import config from "@config/config.json";
 import dateFormat from "@lib/utils/dateFormat";
 import { humanize, slugify } from "@lib/utils/textConverter";
@@ -14,12 +15,17 @@ const Posts = ({ posts, className, authors }) => {
           className={i === 0 ? "col-12" : "col-12 sm:col-6"}
         >
           {post.frontmatter.image && (
-            <Image
-              className="rounded-lg"
+            <PostImage
+              className="w-full rounded-lg"
               src={post.frontmatter.image}
               alt={post.frontmatter.title}
-              width={i === 0 ? "925" : "445"}
-              height={i === 0 ? "475" : "230"}
+              width={i === 0 ? 925 : 445}
+              height={i === 0 ? 475 : 230}
+              sizes={
+                i === 0
+                  ? "(min-width: 1200px) 925px, 92vw"
+                  : "(min-width: 576px) 42vw, 100vw"
+              }
               priority={i === 0 ? true : false}
             />
           )}

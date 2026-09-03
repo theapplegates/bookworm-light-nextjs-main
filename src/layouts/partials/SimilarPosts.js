@@ -1,6 +1,6 @@
+import PostImage from "@components/PostImage";
 import dateFormat from "@lib/utils/dateFormat";
 import { humanize, slugify } from "@lib/utils/textConverter";
-import Image from "next/image";
 import Link from "next/link";
 
 const SimilarPosts = ({ posts }) => {
@@ -9,12 +9,13 @@ const SimilarPosts = ({ posts }) => {
       {posts.map((post, i) => (
         <div key={`key-${i}`} className={"col-12 mb-4 sm:col-4"}>
           {post.frontmatter.image && (
-            <Image
-              className="rounded-lg"
+            <PostImage
+              className="w-full rounded-lg"
               src={post.frontmatter.image}
               alt={post.frontmatter.title}
               width={445}
               height={230}
+              sizes="(min-width: 576px) 30vw, 100vw"
             />
           )}
           <ul className="mt-4 text-text">

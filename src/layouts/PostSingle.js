@@ -1,3 +1,4 @@
+import PostImage from "@components/PostImage";
 import Share from "@components/Share";
 import dateFormat from "@lib/utils/dateFormat";
 import similerItems from "@lib/utils/similarItems";
@@ -63,12 +64,14 @@ const PostSingle = ({ post, posts, authors, slug }) => {
               </li>
             </ul>
             {image && (
-              <Image
+              <PostImage
                 src={image}
                 height={500}
                 width={1000}
                 alt={title}
-                className="rounded-lg"
+                sizes="(min-width: 1000px) 1000px, 100vw"
+                className="w-full rounded-lg"
+                priority={true}
               />
             )}
             <div className="content mb-16 text-left">

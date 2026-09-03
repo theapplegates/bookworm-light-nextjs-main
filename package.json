@@ -10,10 +10,12 @@
     "build": "node src/lib/jsonGenerator.js && node scripts/themeGenerator.mjs && next build",
     "export": "next build && next export",
     "lint": "eslint .",
+    "cloudinary:breakpoints": "node scripts/cloudinary-breakpoints.mjs",
     "start": "next start",
     "preview": "next start"
   },
   "dependencies": {
+    "cloudinary": "^2.11.0",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
@@ -32,6 +34,7 @@
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/postcss": "^4.3.1",
     "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "26.4.1",
     "concurrently": "^9.1.0",
     "date-fns": "^4.4.0",
     "date-fns-tz": "^3.2.0",
@@ -43,5 +46,9 @@
     "sharp": "^0.35.2",
     "tailwind-bootstrap-grid": "^7.0.0",
     "tailwindcss": "^4.3.1"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "unrs-resolver@1.12.2": true
   }
 }
