@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": ["src/layouts/*"],
+      "@components/*": ["src/layouts/components/*"],
+      "@partials/*": ["src/layouts/partials/*"],
+      "@shortcodes/*": ["src/layouts/shortcodes/*"],
+      "@config/*": ["src/config/*"],
+      "@json/*": ["json/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@lib/*": ["src/lib/*"]
+    }
+  }
+}

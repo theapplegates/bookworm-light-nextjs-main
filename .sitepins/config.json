@@ -1,0 +1,10 @@
+{
+  "media": "public/images",
+  "content": "content",
+  "code": "layouts",
+  "arrangement": [],
+  "public": "public",
+  "configs": [
+    "config"
+  ]
+}
